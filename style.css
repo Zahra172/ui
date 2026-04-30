@@ -68,25 +68,29 @@ body {
   border-radius: 3px;
   flex-shrink: 0;
 }
-.dot-seen {
+.seen {
   background: #d4edda;
 }
-.dot-arrived {
+.arrived {
   background: #fff3cd;
 }
-.dot-waiting {
+/* .waiting {
+  background: #d4d4d2; 
+} */
+.booking {
+  background: #d4d4d2;  
+}
+.paid {
+  background: #e2d9f3; 
+}
+
+.end {
+  background: #f8d7da; 
+}
+
+.prepared {
+  
   background: #d1ecf1;
-}
-.dot-purple {
-  background: #e2d9f3; /* موف هادي */
-}
-
-.dot-red {
-  background: #f8d7da; /* أحمر فاتح (مش مزعج) */
-}
-
-.dot-gray {
-  background: #e2e3e5; /* رمادي خفيف */
 }
 
 .primary {
