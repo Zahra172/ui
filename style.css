@@ -76,6 +76,17 @@ body {
 .dot-waiting {
   background: #d1ecf1;
 }
+.dot-purple {
+  background: #e2d9f3; /* موف هادي */
+}
+
+.dot-red {
+  background: #f8d7da; /* أحمر فاتح (مش مزعج) */
+}
+
+.dot-gray {
+  background: #e2e3e5; /* رمادي خفيف */
+}
 
 .primary {
   background: #2a7be4;
