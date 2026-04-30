@@ -1,193 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Clinic Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clinic Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Filters</h2>
 
-<div class="container">
+        <label>Specialty</label>
+        <select>
+          <option>All</option>
+          <option>Cardiology</option>
+          <option>Dental</option>
+          <option>Neurology</option>
+        </select>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>Filters</h2>
+        <label>Doctor</label>
+        <select>
+          <option>All Doctors</option>
+        </select>
 
-    <label>Specialty</label>
-    <select>
-      <option>All</option>
-      <option>Cardiology</option>
-      <option>Dental</option>
-      <option>Neurology</option>
-    </select>
+        <button class="btn primary">Apply</button>
+        <button class="btn">Reset</button>
+      </aside>
 
-    <label>Doctor</label>
-    <select>
-      <option>All Doctors</option>
-    </select>
+      <!-- Main -->
+      <main class="main">
+        <div class="header">
+          <h1>Appointments</h1>
+        </div>
+        <div class="status-legend">
+          <span
+            style="
+              font-size: 12px;
+              color: #555;
+              margin-right: 4px;
+              font-weight: 600;
+            "
+            >Status:</span
+          >
+          <span class="legend-item"
+            ><span class="legend-dot dot-seen"></span> Seen</span
+          >
+          <span class="legend-item"
+            ><span class="legend-dot dot-arrived"></span> Arrived</span
+          >
+          <span class="legend-item"
+            ><span class="legend-dot dot-waiting"></span> Waiting</span
+          >
+        </div>
 
-    <button class="btn primary">Apply</button>
-    <button class="btn">Reset</button>
-  </aside>
+        <!-- ================= Cardiology ================= -->
+        <section class="department">
+          <h2>Cardiology</h2>
+          <div class="doctor">
+            <div class="doctor-header" onclick="toggleDoctor('khaled')">
+              <div style="display: flex; align-items: center">
+                <span class="toggle-arrow open" id="arrow-khaled">▶</span>
+                <select
+                  class="doctor-name-select"
+                  onclick="event.stopPropagation()"
+                >
+                  <option>Dr. Khaled</option>
+                  <option>Dr. Youssef</option>
+                </select>
+              </div>
+              <span class="badge">17/35</span>
+            </div>
 
-  <!-- Main -->
-  <main class="main">
+            <div class="schedule-wrap expanded" id="sched-khaled">
+              
+                <div class="schedule">
+              <div class="slot empty"><span>10:30</span><button>+</button></div>
 
-    <div class="header">
-      <h1>Appointments</h1>
-      <button class="btn primary">Go to Now</button>
+              <div class="slot booked">
+                <div class="time">11:00</div>
+                <div class="patient">Ahmed Ali</div>
+                <div class="status seen">Seen</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">11:30</div>
+                <div class="patient">Sara Mohamed</div>
+                <div class="status arrived">Arrived</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">12:00</div>
+                <div class="patient">Omar Hassan</div>
+                <div class="status waiting">Waiting</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+              <div class="slot empty"><span>01:00</span><button>+</button></div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+              <div class="slot empty"><span>01:00</span><button>+</button></div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mona Adel</div>
+                <div class="status seen">Seen</div>
+              </div>
+
+              <div class="slot empty"><span>01:00</span><button>+</button></div>
+            </div>
+              
+            </div>
+          </div>
+          
+        </section>
+
+        <!-- ================= Dental ================= -->
+        <section class="department">
+          <h2>Dental</h2>
+
+          <div class="doctor">
+            <div class="doctor-header">
+              <h3>Dr. Salma</h3>
+              <span class="badge">30/35</span>
+            </div>
+
+            <div class="schedule">
+              <div class="slot booked">
+                <div class="time">11:30</div>
+                <div class="patient">Aya Khaled</div>
+                <div class="status arrived">Arrived</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">12:00</div>
+                <div class="patient">Mohamed Tarek</div>
+                <div class="status waiting">Waiting</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Laila Samir</div>
+                <div class="status seen">Seen</div>
+              </div>
+
+              <div class="slot empty"><span>01:00</span><button>+</button></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= Neurology ================= -->
+        <section class="department">
+          <h2>Neurology</h2>
+
+          <div class="doctor">
+            <div class="doctor-header">
+              <h3>Dr. Mostafa</h3>
+              <span class="badge">35/35</span>
+            </div>
+
+            <div class="schedule">
+              <div class="slot booked">
+                <div class="time">11:30</div>
+                <div class="patient">Heba Ali</div>
+                <div class="status seen">Seen</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">12:00</div>
+                <div class="patient">Ali Reda</div>
+                <div class="status arrived">Arrived</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mariam Ashraf</div>
+                <div class="status waiting">Waiting</div>
+              </div>
+
+              <div class="slot empty"><span>01:00</span><button>+</button></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= Neurology ================= -->
+        <section class="department">
+          <h2>Neurology</h2>
+
+          <div class="doctor">
+            <div class="doctor-header">
+              <h3>Dr. Mostafa</h3>
+              <span class="badge">35/35</span>
+            </div>
+
+            <div class="schedule">
+              <div class="slot booked">
+                <div class="time">11:30</div>
+                <div class="patient">Heba Ali</div>
+                <div class="status seen">Seen</div>
+              </div>
+
+              <div class="slot booked">
+                <div class="time">12:00</div>
+                <div class="patient">Ali Reda</div>
+                <div class="status arrived">Arrived</div>
+              </div>
+              <div class="slot empty"><span>01:00</span><button>+</button></div>
+              <div class="slot booked">
+                <div class="time">12:30</div>
+                <div class="patient">Mariam Ashraf</div>
+                <div class="status waiting">Waiting</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-
-    <!-- ================= Cardiology ================= -->
-    <section class="department">
-      <h2>Cardiology</h2>
-
-      <div class="doctor">
-        <div class="doctor-header">
-          <h3>Dr. Khaled</h3>
-          <span class="badge">17/35</span>
-        </div>
-
-        <div class="schedule">
-
-          <div class="slot empty"><span>10:30</span><button>+</button></div>
-
-          <div class="slot booked">
-            <div class="time">11:00</div>
-            <div class="patient">Ahmed Ali</div>
-            <div class="status seen">Seen</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">11:30</div>
-            <div class="patient">Sara Mohamed</div>
-            <div class="status arrived">Arrived</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">12:00</div>
-            <div class="patient">Omar Hassan</div>
-            <div class="status waiting">Waiting</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">12:30</div>
-            <div class="patient">Mona Adel</div>
-            <div class="status seen">Seen</div>
-          </div>
-
-          <div class="slot empty"><span>01:00</span><button>+</button></div>
-
-        </div>
-      </div>
-
-      <!-- Doctor 2 -->
-      <div class="doctor">
-        <div class="doctor-header">
-          <h3>Dr. Youssef</h3>
-          <span class="badge">22/35</span>
-        </div>
-
-        <div class="schedule">
-
-          <div class="slot booked">
-            <div class="time">10:30</div>
-            <div class="patient">Hassan Ali</div>
-            <div class="status waiting">Waiting</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">11:00</div>
-            <div class="patient">Nour Ahmed</div>
-            <div class="status arrived">Arrived</div>
-          </div>
-
-          <div class="slot empty"><span>11:30</span><button>+</button></div>
-
-          <div class="slot booked">
-            <div class="time">12:00</div>
-            <div class="patient">Karim Samy</div>
-            <div class="status seen">Seen</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= Dental ================= -->
-    <section class="department">
-      <h2>Dental</h2>
-
-      <div class="doctor">
-        <div class="doctor-header">
-          <h3>Dr. Salma</h3>
-          <span class="badge">30/35</span>
-        </div>
-
-        <div class="schedule">
-
-          <div class="slot booked">
-            <div class="time">11:30</div>
-            <div class="patient">Aya Khaled</div>
-            <div class="status arrived">Arrived</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">12:00</div>
-            <div class="patient">Mohamed Tarek</div>
-            <div class="status waiting">Waiting</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">12:30</div>
-            <div class="patient">Laila Samir</div>
-            <div class="status seen">Seen</div>
-          </div>
-
-          <div class="slot empty"><span>01:00</span><button>+</button></div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= Neurology ================= -->
-    <section class="department">
-      <h2>Neurology</h2>
-
-      <div class="doctor">
-        <div class="doctor-header">
-          <h3>Dr. Mostafa</h3>
-          <span class="badge">35/35</span>
-        </div>
-
-        <div class="schedule">
-
-          <div class="slot booked">
-            <div class="time">11:30</div>
-            <div class="patient">Heba Ali</div>
-            <div class="status seen">Seen</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">12:00</div>
-            <div class="patient">Ali Reda</div>
-            <div class="status arrived">Arrived</div>
-          </div>
-
-          <div class="slot booked">
-            <div class="time">12:30</div>
-            <div class="patient">Mariam Ashraf</div>
-            <div class="status waiting">Waiting</div>
-          </div>
-
-          <div class="slot empty"><span>01:00</span><button>+</button></div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-</div>
-
-</body>
+  </body>
 </html>
+<script>
+  function toggleDoctor(id) {
+    const wrap = document.getElementById('sched-' + id);
+    const arrow = document.getElementById('arrow-' + id);
+    const isOpen = wrap.classList.contains('expanded');
+    wrap.className = 'schedule-wrap ' + (isOpen ? 'collapsed' : 'expanded');
+    arrow.className = 'toggle-arrow' + (isOpen ? '' : ' open');
+  }
+</script>

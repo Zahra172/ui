@@ -15,11 +15,10 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
+  width: 300px;
   background: #1e3a5f;
   color: white;
   padding: 20px;
-  height: 100vh;
 }
 
 .sidebar h2 {
@@ -44,6 +43,38 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 6px;
+}
+.status-legend {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  align-items: center;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.dot-seen {
+  background: #d4edda;
+}
+.dot-arrived {
+  background: #fff3cd;
+}
+.dot-waiting {
+  background: #d1ecf1;
 }
 
 .primary {
@@ -75,7 +106,7 @@ body {
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .doctor-header {
@@ -88,6 +119,40 @@ body {
   background: #e3f2fd;
   padding: 4px 8px;
   border-radius: 6px;
+}
+/* Toggle arrow */
+.toggle-arrow {
+  font-size: 11px;
+  color: #888;
+  transition: transform 0.2s;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.toggle-arrow.open {
+  transform: rotate(90deg);
+}
+
+/* Doctor name as dropdown */
+.doctor-name-select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Collapsible wrapper */
+.schedule-wrap {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.schedule-wrap.collapsed {
+  max-height: 0;
+}
+.schedule-wrap.expanded {
+  max-height: 2000px;
 }
 
 /* Schedule */
