@@ -16,7 +16,7 @@ body {
    align-items: stretch;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 300px;
   background: var(--primary-color);
@@ -104,25 +104,21 @@ body {
   color: white;
 }
 
-/* Main */
 .main {
   flex: 1;
   padding: 20px;
 }
 
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-/* Department */
 .department h2 {
   margin-bottom: 10px;
 }
 
-/* Doctor */
 .doctor {
   background: white;
   padding: 15px;
@@ -142,7 +138,7 @@ body {
   padding: 4px 8px;
   border-radius: 6px;
 }
-/* Toggle arrow */
+
 .toggle-arrow {
   font-size: 11px;
   color: #888;
@@ -154,7 +150,7 @@ body {
   transform: rotate(90deg);
 }
 
-/* Doctor name as dropdown */
+
 .doctor-name-select {
   border: none;
   background: transparent;
@@ -177,14 +173,14 @@ body {
   max-height: 2000px;
 }
 
-/* Schedule */
+
 .schedule {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
 }
 
-/* Slot */
+
 .slot {
   border-radius: 8px;
   padding: 10px;
@@ -211,7 +207,6 @@ body {
   margin: 5px 0;
 }
 
-/* Status */
 .status {
   padding: 3px 6px;
   border-radius: 5px;
@@ -219,7 +214,6 @@ body {
   display: inline-block;
 }
 
-/* Colors */
 .seen {
   background: #d4edda;
   color: #155724;
