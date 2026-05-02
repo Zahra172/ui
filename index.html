@@ -24,6 +24,16 @@
           <option>All Doctors</option>
         </select>
 
+        <label>Status</label>
+        <select>
+          <option>All</option>
+          <option>Seen</option>
+          <option>Arrived</option>
+          <option>Booking</option>
+          <option>Paid</option>
+          <option>End</option>
+        </select>
+
         <button class="btn primary">Apply</button>
         <button class="btn">Reset</button>
       </aside>
@@ -36,7 +46,7 @@
 
         <!-- ================= Cardiology ================= -->
         <section class="department">
-          <h2>Cardiology</h2>
+          <h2 class="heading">Cardiology</h2>
           <div class="doctor">
             <div class="doctor-header">
               <div style="display: flex; align-items: center">
@@ -82,43 +92,43 @@
                   <div class="status seen">Seen</div>
                 </div>
                 <div class="slot booked">
-                  <div class="time">12:30</div>
+                  <div class="time">01:00</div>
                   <div class="patient">Mona Adel</div>
                   <div class="status end">end</div>
                 </div>
                 <div class="slot booked">
-                  <div class="time">12:30</div>
+                  <div class="time">01:30</div>
                   <div class="patient">Mona Adel</div>
                   <div class="status seen">Seen</div>
                 </div>
                 <div class="slot empty">
-                  <span>01:00</span><button>+</button>
+                  <span>02:00</span><button>+</button>
                 </div>
                 <div class="slot booked">
-                  <div class="time">12:30</div>
+                  <div class="time">02:30</div>
                   <div class="patient">Mona Adel</div>
                   <div class="status paid">Paid</div>
                 </div>
                 <div class="slot booked">
-                  <div class="time">12:30</div>
+                  <div class="time">03:00</div>
                   <div class="patient">Mona Adel</div>
                   <div class="status seen">Seen</div>
                 </div>
                 <div class="slot booked">
-                  <div class="time">12:30</div>
+                  <div class="time">03:30</div>
                   <div class="patient">Mona Adel</div>
                   <div class="status seen">Seen</div>
                 </div>
                 <div class="slot booked">
-                  <div class="time">12:30</div>
+                  <div class="time">04:00</div>
                   <div class="patient">Mona Adel</div>
                   <div class="status seen">Seen</div>
                 </div>
                 <div class="slot empty">
-                  <span>01:00</span><button>+</button>
+                  <span>04:30</span><button>+</button>
                 </div>
                 <div class="slot booked">
-                  <div class="time">12:30</div>
+                  <div class="time">05:00</div>
                   <div class="patient">Mona Adel</div>
                   <div class="status seen">Seen</div>
                 </div>
@@ -131,7 +141,7 @@
 
         <!-- ================= Dental ================= -->
         <section class="department">
-          <h2>Dental</h2>
+          <h2 class="heading">Dental</h2>
 
           <div class="doctor">
             <div class="doctor-header">
@@ -177,14 +187,32 @@
                   <div class="status prepared">Preparing</div>
                 </div>
                 <div class="slot booked">
-                  <div class="time">2:00</div>
+                  <div class="time">02:00</div>
                   <div class="patient">Laila Samir</div>
                   <div class="status arrived">Arrived</div>
                 </div>
                 <div class="slot booked">
-                  <div class="time">2:30</div>
+                  <div class="time">02:30</div>
                   <div class="patient">Laila Samir</div>
                   <div class="status seen">Seen</div>
+                </div>
+                <div class="slot booked">
+                  <div class="time">03:00</div>
+                  <div class="patient">Mona Adel</div>
+                  <div class="status seen">Seen</div>
+                </div>
+                <div class="slot booked">
+                  <div class="time">03:30</div>
+                  <div class="patient">Mona Adel</div>
+                  <div class="status end">end</div>
+                </div>
+                <div class="slot booked">
+                  <div class="time">04:00</div>
+                  <div class="patient">Mona Adel</div>
+                  <div class="status seen">Seen</div>
+                </div>
+                <div class="slot empty">
+                  <span>04:30</span><button>+</button>
                 </div>
               </div>
             </div>
@@ -193,7 +221,7 @@
 
         <!-- ================= Neurology ================= -->
         <section class="department">
-          <h2>Neurology</h2>
+          <h2 class="heading">Neurology</h2>
 
           <div class="doctor">
             <div class="doctor-header">
@@ -203,8 +231,8 @@
                   class="doctor-name-select"
                   onclick="event.stopPropagation()"
                 >
-                  <option>Dr. Khaled</option>
-                  <option>Dr. Youssef</option>
+                  <option>Dr. Marwa</option>
+                  <option>Dr. Ahmed</option>
                 </select>
               </div>
               <span class="badge">35/35</span>
@@ -232,12 +260,15 @@
                 <div class="slot empty">
                   <span>01:00</span><button>+</button>
                 </div>
+                <div class="slot booked">
+                  <div class="time">01:30</div>
+                  <div class="patient">Ali Reda</div>
+                  <div class="status arrived">Arrived</div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-
-
       </main>
     </div>
   </body>
